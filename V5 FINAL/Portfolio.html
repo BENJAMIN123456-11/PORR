@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Prints - Porfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: scroll;
+        }
+
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .header-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .header-container img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Gabriola', serif;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 145px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+
+        .nav-container a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-container a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .content h2,
+        .content p {
+            animation: fadeIn 2s ease-out;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 20%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="bgm" autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('bgm');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay was prevented.");
+                });
+            }
+        });
+    </script>
+
+    <div class="header-container">
+        <img src="LMP.png" alt="LM Prints Logo">
+        <h1>LM Prints</h1>
+    </div>
+
+    <div class="nav-container">
+        <a href="Order.html"><<<</a>
+        <a href="Portfolio.html">Portfolio</a>
+    </div>
+
+    <div class="content" style="font-size: 11px;">
+        <h2>Portfolio</h2>
+        <li style="color: rgb(151, 236, 80);">Vision</li>
+        <ul>To become the leading provider of printing services in the region.</ul>
+        <ul>To continuously innovate and offer the best pre-order printing experience, tailored to our customers' unique needs.</ul>
+        <li style="color: rgb(151, 236, 80);">Mission</li>
+        <ul>To deliver exceptional printing services that exceed customer expectations.</ul>
+        <ul>To provide seamless pre-order processes that ensure timely and accurate delivery of customized products.</ul>
+        <ul>To foster long-term relationships with our clients by consistently delivering quality and reliability.</ul>
+        <li style="color: rgb(151, 236, 80); font-size: xx-small;">Core Values</li>
+        <ul><b style="color: red;">Quality</b style="font-size: xx-small;">: We prioritize excellence in every print, ensuring that our products meet the highest standards.</ul>
+        <ul><b style="color: red;">Customer Focus</b style="font-size: xx-small;">: We are committed to understanding and meeting the specific needs of our customers.</ul>
+        <ul><b style="color: red;">Innovation</b style="font-size: xx-small;">: We continuously seek new ways to enhance our printing processes and services.</ul>
+        <li><b style="color: red;">Top-Notch Printing</b style="font-size: xx-small;">:We utilize the latest technology to deliver crisp, vibrant, and durable prints.</li>
+        <li style="color: rgb(151, 236, 80);">Why LM Prints?</li>
+        <ul><b style="color: red;">Top-Notch Printing</b style="font-size: xx-small;">: We utilize the latest technology to deliver crisp, vibrant, and durable prints.</ul>
+        <ul><b style="color: red;">Personalized Service</b style="font-size: xx-small;">: Every project is tailored to meet the unique needs of our clients.</ul>
+        <ul><b style="color: red;">Seamless Pre-Order Experience</b style="font-size: xx-small;">: We offer a smooth and straightforward pre-order process, ensuring that you receive exactly what you need, when you need it.</ul>
+        <li>Services style="color: rgb(151, 236, 80);"</li>
+        <ul><b style="color: red;">Custom Printing</b style="font-size: xx-small;">: From business cards to banners, we provide a wide range of customized printing solutions.</ul>
+        <ul><b style="color: red;">Pre-Order Printing</b style="font-size: xx-small;">: Plan ahead with our reliable pre-order system, guaranteeing availability and timely delivery.</ul>
+        <ul><b style="color: red;">Design Assistance</b style="font-size: xx=small;">: Need help with your design? Our team is here to support you every step of the way.</ul>
+        <li style="color: rgb(151, 236, 80);">Join Us on Our Journey!</li>
+        <ul style="font-size: xx-small;">Experience the difference with <b style="color: red;">LM Prints.</b></ul>
+        <ul style="font-size: xx-small;">Let us help you bring your ideas to life with our high-quality printing services.</ul>
+        <ul>Contact us today to start your next project!</ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LM Prints. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+ .content-container h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .content-container p {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 1.8;
+        }

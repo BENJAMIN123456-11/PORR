@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Prints - Order</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        video.background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            background-size: cover;
+            filter: brightness(0.5);
+        }
+
+        .header-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .header-container img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Gabriola', serif;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+
+        .nav-container a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-container a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            position: absolute;
+            top: 210px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+        }
+
+        .content-container h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .content-container p {
+            margin: 10px 0;
+
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #3e362e;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: left;
+            font-size: 14px;
+        }
+
+        .button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .button:hover {
+            background-color: #5c514f;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="bgm" autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('bgm');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay was prevented.");
+                });
+            }
+        });
+    </script>
+
+    <div class="header-container">
+        <img src="LMP.png" alt="LM Prints Logo">
+        <h1>LM Prints</h1>
+    </div>
+
+    <div class="nav-container">
+        <a href="contact.html"><<<</a>
+        <a href="Order.html">Order Now!</a>
+        <a href="Portfolio.html">>>></a>
+    </div>
+
+    <div class="container">
+        <h2 style="text-align: center; font-size: 48px; color: #ffa07a;">
+            Be <sub style="color: #ffffff;">creative</sub>
+        </h2>
+        <p style="color: red;">
+            Print and order an item now and get 10% off discount for your first order!
+        </p>
+
+        <div class="order-buttons">
+            <form action="send_email.php" method="post">
+                <button type="submit" name="order" value="Black and White Text Print - 3₱" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+                    <img src="blackwhite.png" alt="Black and White Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+                    <span>Full Page Black & White Text Print - 3₱</span>
+                </button>
+
+                <button type="submit" name="order" value="Colored Text - 5₱" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+                    <img src="coloredtxt.png" alt="Colored Text Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+                    <span>Full Page Colored Text - 5₱</span>
+                </button>
+
+                <button type="submit" name="order" value="Fully Colored Page - 7₱" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+                    <img src="fullcolor.png" alt="Full Colored Page Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+                    <span>Fully Colored Page - 7₱</span>
+                </button>
+
+                <button type="submit" name="order" value="3D Printed Model - 15₱-1K₱" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+                    <img src="3d.png" alt="3D Printed Model" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+                    <span>3D Printed Model - 15₱-1K₱</span>
+                </button>
+
+                <button type="submit" name="order" value="Photo - 10₱-15₱" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+                    <img src="Photo.png" alt="Photo Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+                    <span>Photo - 10₱-15₱</span>
+                </button>
+
+                <button type="submit" name="order" value="Photo w/ Frame - 25₱-50₱" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+                    <img src="PhotoFrame.png" alt="Photo with Frame" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+                    <span>Photo w/ Frame - 25₱-50₱</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LM Prints. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

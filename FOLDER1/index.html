@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #00ffcc;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #009999;
+        }
+    </style>
+</head>
+<body>
+    <button class="nav-button" onclick="location.href='skills.html'">→ Skills</button>
+    <div class="container">
+        <h1>Welcome to My Biology&Information</h1>
+        <p>
+            Hello! I am Benjamin R. Fernandez IV, a passionate football player and an ICT student. 
+            Living in Prk Lemonsito Zone 1, Mankilam, Tagum City, Philippines, I strive to balance 
+            my studies with my love for the game. My goal is to become successful and pursue a 
+            professional career in football one day. I believe with hard work and dedication, 
+            I can achieve my dreams on and off the field.
+        </p>
+        <p>
+            Join me as I share my experiences in football training, strategies, and my journey as an ICT student. 
+            Feel free to check out my <a href="#projects">projects</a> related to technology in sports 
+            and <a href="#contact">contact</a> me for collaboration or to discuss our shared passions!
+        </p>
+        <div class="info">
+            <p><strong>Full Name:</strong> Benjamin R. Fernandez IV</p>
+            <p><strong>Ethnicity:</strong> Filipino</p>
+            <p><strong>Address:</strong> Prk Lemonsito Zone 1, Mankilam, Tagum City, Philippines</p>
+            <strong>Contact:</strong> <a href="tel:+639310167974" style="color: #00ffcc;">+639310167974</a>
+        </div>
+    </div>
+</body>
+</html>

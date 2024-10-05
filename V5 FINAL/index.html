@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Prints - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            background-size: cover;
+            filter: brightness(0.5);
+        }
+
+        .header-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .header-container img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Gabriola', serif;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+
+        .nav-container a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-container a:hover {
+            text-decoration: underline;
+        }
+
+        .content-container {
+            position: absolute;
+            top: 210px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+        }
+
+        .content-container h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .content-container p {
+            margin: 10px 0;
+
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #3e362e;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .button img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .button:hover {
+            background-color: #5c514f;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="bgm" autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="header-container">
+        <img src="LMP.png" alt="LM Prints Logo">
+        <h1>LM Prints</h1>
+    </div>
+
+    <div class="nav-container">
+        <a href="about.html">>>></a>
+    </div>
+
+    <div class="content-container">
+        <h2 style="text-align: center; font-size: 30px; color: #ffa07a;">Be <sub style="color: #ffffff;">creative</sub></h2>
+        <p style="font-size: 11;">Your one-stop shop for all printing needs. We provide high-quality prints through your artwork.</p>
+        <p style="font-size: 13;"><b>RECOMMENDED ITEMS</b></p>
+        <div class="button-container">
+            <button class="button" onclick="window.location.href='order.html?type=black_white_text'">
+                <img src="blackwhite.png" alt="Black and White Print">
+                Full Page Black & White Text Print - 3 PHP
+            </button>
+            <button class="button" onclick="window.location.href='order.html?type=colored_text'">
+                <img src="coloredtxt.png" alt="Colored Text Print">
+                Full Page Colored Text - 5 PHP
+            </button>
+            <button class="button" onclick="window.location.href='order.html?type=full_colored_page'">
+                <img src="fullcolor.png" alt="Full Colored Page Print">
+                Fully Colored Page - 7 PHP
+            </button>
+        </div>
+    </div>
+        
+    <footer>
+        <p>&copy; 2024 LM Prints. All rights reserved.</p>
+    </footer>
+</body>
+    
+</html>

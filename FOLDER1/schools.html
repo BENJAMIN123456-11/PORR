@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schools</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .nav-button {
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #009999;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #009999;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-buttons">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='skills.html'">Skills</button>
+    </div>
+    <div class="container">
+        <h1>My Schools</h1>
+        <ul>
+            <li>Ms. Little Trumpets - Elementary G1-G2</li>
+            <li>Sto. Niño Elementary School - G3</li>
+            <li>Philippine Army Officers Ladies Foundation School - Elementary G4-G6 (PAOLFS) (Taguig City, BGC, Bayani Road)</li>
+            <li>Tagum City National Comprehensive High School - G7-G8</li>
+            <li>Letran De Davao (High School Department) - G9</li>
+        </ul>
+        <button class="back-button" onclick="location.href='index.html'">← Back</button>
+    </div>
+</body>
+</html>

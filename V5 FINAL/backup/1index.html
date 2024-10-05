@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Prints - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #AC8968;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            left: 20px;
+            top: 23px;
+            width: 50px;
+            height: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Gabriola', serif;
+            color: rgb(0, 0, 0);
+        }
+
+        nav {
+            background-color: #3e362e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .container h2,
+        .container p {
+            animation: fadeIn 2s ease-out;
+        }
+
+        footer {
+            background-color: #AC8968;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="bgm" autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header>
+        <img src="LMP.png" alt="LM Prints Logo">
+        <h1 style="font-family: 'Gabriola', serif;">LM Prints</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="Order.html">Order Now!</a>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align: center; font-size: 48px; color: #ffa07a;">Be <sub style="color: #ffffff;">creative</sub></h2>
+        <p style="text-align: center; color: white;">Your one-stop shop for all printing needs. We provide high-quality prints through your artwork.</p>
+        <p style="text-align: center; color: white;"> <br/> <b>RECOMMENDED ITEMS</b> <br/> </p>
+    </div>
+
+    <div style="text-align: center; margin: 20px 0;">
+        <button onclick="window.location.href='order.html?type=black_white_text'" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+            <img src="blackwhite.png" alt="Black and White Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+            Full Page Black & White Text Print - 3 PHP
+        </button>
+        <button onclick="window.location.href='order.html?type=colored_text'" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+            <img src="coloredtxt.png" alt="Colored Text Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+            Full Page Colored Text - 5 PHP
+        </button>
+        <button onclick="window.location.href='order.html?type=full_colored_page'" style="background-color: #3e362e; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer;">
+            <img src="fullcolor.png" alt="Full Colored Page Print" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;">
+            Fully Colored Page - 7 PHP
+        </button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 LM Prints. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

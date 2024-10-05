@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Prints - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        #bgVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .header-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .header-container img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Gabriola', serif;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 145px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+
+        .nav-container a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-container a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .content h2,
+        .content p {
+            animation: fadeIn 2s ease-out;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="bgVideo">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="bgm" autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('bgm');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay was prevented.");
+                });
+            }
+        });
+    </script>
+
+    <div class="header-container">
+        <img src="LMP.png" alt="LM Prints Logo">
+        <h1>LM Prints</h1>
+    </div>
+
+    <div class="nav-container">
+        <a href="index.html"><<<</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">>>></a>
+    </div>
+
+    <div class="content">
+        <h2>About Us</h2>
+        <p style="font-size: 11px;">Welcome to LM Prints—where your ideas come to life! We are your one-stop shop for all things printing, right in the heart of Tagum City, Philippines. Whether you need prints that captivate, communicate, or celebrate, we’re here to make it happen with unmatched quality and flair.
+        Lewis Miguel Baldelovar founded LM Prints with a bold vision: to revolutionize the printing experience by combining cutting-edge technology with a personal touch. In just a few short months, we've already made waves in the community, becoming the go-to destination for anyone who values creativity, precision, and excellence.
+        At LM Prints, we don’t just print—we transform your artwork into high-quality masterpieces. From business branding that stands out to personal projects that tug at the heartstrings, we’re all about making your prints as unique as you are. Imagine your ideas, brought to life with the kind of detail and vibrancy that leaves a lasting impression.
+        What sets us apart? It’s our passion, our dedication, and our relentless pursuit of perfection. We’re not satisfied until you’re thrilled with the results. Every project, big or small, gets our full attention and expertise. Because at LM Prints, we believe that your success is our success.
+        Join the growing number of satisfied clients who’ve discovered the LM Prints difference. Whether it’s for a special event, a marketing campaign, or just because, we’re ready to exceed your expectations and make your vision a reality.
+        Thank you for choosing LM Prints. Let’s create something amazing together!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LM Prints. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

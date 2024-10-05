@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Prints - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        video.background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .header-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .header-container img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Gabriola', serif;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 145px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+        }
+
+        .nav-container a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-container a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 48px;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .container p {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 1.8;
+            animation: fadeIn 2s ease-out;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="bgm" autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('bgm');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay was prevented.");
+                });
+            }
+        });
+    </script>
+
+    <div class="header-container">
+        <img src="LMP.png" alt="LM Prints Logo">
+        <h1>LM Prints</h1>
+    </div>
+
+    <div class="nav-container">
+        <a href="about.html"><<<</a>
+        <a href="contact.html">Contact</a>
+        <a href="Order.html">>>></a>
+    </div>
+
+    <div class="container">
+        <h2 style="font-size: 16;">Contact Us</h2>
+        <p>Email: <a href="mailto:fernandezbenjie000@gmail.com" style="color: #ffffff; font-size: 11px;">fernandezbenjie000@gmail.com</a></p>
+        <p>Email: <a href="mailto:lewismiguelbaldelovar@gmail.com" style="color: #ffffff; font-size: 11px;">lewismiguelbaldelovar@gmail.com</a></p>
+        <p>Phone: <a href="tel:+63910167974" style="color: #ffffff; font-size: 11px;">+63 910 167 974</a></p>
+        <p>Phone: <a href="tel:+639602079780" style="color: #ffffff; font-size: 11px;">+63 960 207 9780</a></p>
+        <p style="font-size: 11px;">Address: Letran De Davao Inc., Seminary Drive, Tagum City</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LM Prints. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

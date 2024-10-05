@@ -1,0 +1,11 @@
+        <div>
+                <button>
+                    <img src="PICTURENINYO.png" alt="Colored Text Print">
+                    <span>ambot ninyo unsay e butang ninyo</span>
+                </button>
+
+                <button>
+                    <img src="PICTURENINYO.png" alt="Colored Text Print">
+                    <span>Ambot japun ninyo</span>
+                </button>
+        </div>
