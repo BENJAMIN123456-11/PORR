@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .nav-button {
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #009999;
+        }
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #009999;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-buttons">
+        <button class="nav-button" onclick="location.href='index.html'">Home</button>
+        <button class="nav-button" onclick="location.href='schools.html'">schools</button>
+    </div>
+    <div class="container">
+        <h1>My Hobbies</h1>
+        <ul>
+            <li>Strumming my guitar and getting lost in the music</li>
+            <li>Creating beautiful melodies on the piano</li>
+            <li>Exploring the world of instruments, with guitar being my favorite</li>
+            <li>Going for energizing jogs to clear my mind</li>
+            <li>Pushing my limits while working out at the gym</li>
+            <li>Building strength and control through calisthenics</li>
+            <li>Unwinding with a quick 30-minute video game session</li>
+            <li>Editing videos as a side hustle and passion</li>
+            <li>Designing webpages just for fun and creativity</li>
+        </ul>
+        <button class="back-button" onclick="location.href='index.html'">← Back</button>
+    </div>
+</body>
+</html>
